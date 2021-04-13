@@ -1,0 +1,2 @@
+# ADS
+ kerek bolad
