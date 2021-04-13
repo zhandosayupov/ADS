@@ -50,10 +50,10 @@ void bfs_AL(int start_vertex){// O(V+E)
 	queue< int > VertexQueue; VertexQueue.push(start_vertex);
 	while(!( VertexQueue.empty() )){
 		int current = q.front(); q.pop();
-		for ( int j = 0; j < (int) AdjacencyList[current].size(); j++){
-			if(distance[j] == inf){
-				distance[j] = distance[current] + 1;
-				q.push(j);
+		for (auto i : AdjacencyList[current]){
+			if(distance[i] == inf){
+				distance[i] = distance[current] + 1;
+				q.push(i);
 			}
 		}
 	}
