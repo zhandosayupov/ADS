@@ -46,13 +46,13 @@ vector< pair <int, int> > EdgeList (20000);
 
 //DFS
 vector< bool > VertexList(5000);
-void dfs_AM(int u){
+void dfs_AM(int u){    // O(V^2)
 	VertexList[u] = 1; //Mark visited vertex
 	for(auto& i : AdjacencyMatrix[u]){
 		if(i != 0 and !( VertexList[i] )) dfs_AM(i);
 	}
 }
-void dfs_AL(int u){ //MOST EFFICIENT
+void dfs_AL(int u){ //MOST EFFICIENT   O(V+E)
 	VertexList[u] = 1;  //Mark visited vertex
 	for(auto& i : AdjacencyList[u]){ //Iterate through all connected vertexes 
 		if( !( VertexList[i] )) dfs_Al(i); //If vertex #i was not visited yet, go to i
