@@ -55,7 +55,7 @@ void dfs_AM(int u){    // O(V^2)
 void dfs_AL(int u){ //MOST EFFICIENT   O(V+E)
 	VertexList[u] = 1;  //Mark visited vertex
 	for(auto& i : AdjacencyList[u]){ //Iterate through all connected vertexes 
-		if( !( VertexList[i] )) dfs_Al(i); //If vertex #i was not visited yet, go to i
+		if( !( VertexList[i] )) dfs_AL(i); //If vertex #i was not visited yet, go to i
 	}
 }
 void dfs_EL(int u){
