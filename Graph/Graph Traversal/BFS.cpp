@@ -45,7 +45,7 @@ vector< set <int> > AdjacencyList (5000);
 vector< pair <int, int> > EdgeList (20000);
 
 //BFS
-void bfs_AL(int start_vertex){ O(V+E)
+void bfs_AL(int start_vertex){// O(V+E)
 	vector< int > distance(5000, inf); d[start_vertex] = 0;
 	queue< int > VertexQueue; VertexQueue.push(start_vertex);
 	while(!( VertexQueue.empty() )){
